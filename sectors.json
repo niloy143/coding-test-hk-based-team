@@ -1,0 +1,145 @@
+[
+    {
+        "sector": "Manufacturing",
+        "subSectors": [
+            "Construction Materials",
+            "Electronics and Optics",
+            {
+                "sector": "Food and Beverage",
+                "subSectors": [
+                    "Bakery & confectionery products",
+                    "Beverages",
+                    "Fish & fish products",
+                    "Meat and meat products",
+                    "Milk and dairy products",
+                    "Sweet & snack food",
+                    "Other"
+                ]
+            },
+            {
+                "sector": "Furniture",
+                "subSectors": [
+                    "Bathroom/Sauna",
+                    "Bedroom",
+                    "Children's room",
+                    "Kitchen",
+                    "Living room",
+                    "Office",
+                    "Outdoor",
+                    "Project furniture",
+                    "Other"
+                ]
+            },
+            {
+                "sector": "Machinery",
+                "subSectors": [
+                    "Machinery components",
+                    "Machinery equipment/tools",
+                    "Manufacture of machinery",
+                    {
+                        "sector": "Maritime",
+                        "subSectors": [
+                            "Aluminium and steel workboats",
+                            "Boat/Yacht building",
+                            "Ship repair and conversion"
+                        ]
+                    },
+                    "Metal structures",
+                    "Repair and Maintenance service",
+                    "Other"
+                ]
+            },
+            {
+                "sector": "Metalworking",
+                "subSectors": [
+                    "Construction of metal structures",
+                    "Houses and buildings",
+                    "Metal products",
+                    {
+                        "sector": "Metal works",
+                        "subSectors": [
+                            "CNC-machining",
+                            "Forgings, Fasteners",
+                            "Gas, Plasma, Laser cutting",
+                            "MIG, TIG, Aluminium welding"
+                        ]
+                    }
+                ]
+            },
+            {
+                "sector": "Plastic and Rubber",
+                "subSectors": [
+                    "Packaging",
+                    "Plastic goods",
+                    {
+                        "sector": "Plastic processing technology",
+                        "subSectors": [
+                            "Blowing",
+                            "Moulding",
+                            "Plastics welding and processing"
+                        ]
+                    },
+                    "Plastic profiles"
+                ]
+            },
+            {
+                "sector": "Printing",
+                "subSectors": [
+                    "Advertising",
+                    "Book/Periodicals printing",
+                    "Labelling and packaging printing"
+                ]
+            },
+            {
+                "sector": "Textile and Clothing",
+                "subSectors": [
+                    "Clothing",
+                    "Textile"
+                ]
+            },
+            {
+                "sector": "Wood",
+                "subSectors": [
+                    "Wooden building materials",
+                    "Wooden houses",
+                    "Other"
+                ]
+            }
+        ]
+    },
+    {
+        "sector": "Service",
+        "subSectors": [
+            "Business services",
+            "Engineering",
+            {
+                "sector": "Information Technology and Telecommunications",
+                "subSectors": [
+                    "Data processing, Web portals, E-marketing",
+                    "Programming, Consultancy",
+                    "Software, Hardware",
+                    "Telecommunications"
+                ]
+            },
+            "Tourism",
+            "Translation services",
+            {
+                "sector": "Transport and Logistics",
+                "subSectors": [
+                    "Air",
+                    "Rail",
+                    "Road",
+                    "Water"
+                ]
+            }
+        ]
+    },
+    {
+        "sector": "Other",
+        "subSectors": [
+            "Creative Industries",
+            "Energy technology",
+            "Environment"
+        ]
+    }
+]
