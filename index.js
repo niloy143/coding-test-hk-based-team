@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -18,9 +18,25 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
     try {
         const sectorsCollection = client.db('coding-test-hk-based-team').collection('sectors');
+        const usersCollection = client.db('coding-test-hk-based-team').collection('users');
         app.get('/sectors', async (req, res) => {
             const sectors = await sectorsCollection.find({}).toArray();
             res.send(sectors);
+        })
+
+        app.get('/user', async (req, res) => {
+            const user = await usersCollection.findOne({ _id: ObjectId(req.query.id) });
+            res.send(user);
+        })
+
+        app.post('/user', async (req, res) => {
+            const result = await usersCollection.insertOne(req.body);
+            res.send(result);
+        })
+
+        app.put('/user', async (req, res) => {
+            const result = await usersCollection.updateOne({ _id: ObjectId(req.query.id) }, { $set: req.body }, { upsert: true });
+            res.send(result);
         })
     }
     catch (err) {
