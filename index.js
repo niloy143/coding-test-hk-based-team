@@ -12,13 +12,16 @@ app.get('/', (req, res) => {
     res.send({ status: 'running' })
 })
 
-
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.sq5icdb.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function run() {
     try {
-
+        const sectorsCollection = client.db('coding-test-hk-based-team').collection('sectors');
+        app.get('/sectors', async (req, res) => {
+            const sectors = await sectorsCollection.find({}).toArray();
+            res.send(sectors);
+        })
     }
     catch (err) {
         console.log(err)
